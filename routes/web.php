@@ -21,3 +21,11 @@ Route::get('/', function () {
 Route::get('/start', function () {
     return view('helloworld');
 });
+
+Route::get('/form', function () {
+    return view('form');
+});
+
+Route::post('/post-form', "gustController@index");
+
+Route::get('/get-guest', "gustController@getGuest");

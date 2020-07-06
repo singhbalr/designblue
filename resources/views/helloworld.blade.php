@@ -8,7 +8,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
         <!-- Styles -->
         <style>
             html, body {
@@ -61,9 +62,58 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .flex-body{
+                display:flex;
+                
+            }
+            .cardx{
+                padding: 51px;
+            }
+            .wrap{
+                flex-wrap: wrap;
+            }
+            .flex{
+                display: flex;
+    justify-content: center;
+            }
+            .center{
+
+            }
         </style>
     </head>
     <body>
-            <h1>Hello World</h1>
+
+            @php
+            $index = 22;
+
+            @endphp
+            <div class ="flex">
+                <div class ="center">
+                INSTRUCTORS
+                </div>
+                <div class = "center">
+                Show intructor by <span class ="select">
+                <select>
+                    <option>A-Z</option>
+                    <option>Z-A</option>
+                    <option>Ride Rev Recommendation</option>
+                    <option>New Instructors</option>
+
+                </select>
+                </span>
+                </div>
+            </div>
+            <div class = "flex-body wrap">
+
+            @for($start = 0; $start < $index; $start++)
+            <div class = "cardx">
+                <img src = "https://media.gettyimages.com/photos/cute-girl-wearing-sweater-picture-id1035964728?s=612x612"></img>
+                <div class ="div-button-hide-pure-css">
+                
+                </div>
+            </div>
+            @endfor
+            <div>
     </body>
 </html>
